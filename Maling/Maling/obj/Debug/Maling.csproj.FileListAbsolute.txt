@@ -1,0 +1,10 @@
+C:\Users\kag\OneDrive\Dokumenter\GitHub\Maling\Maling\Maling\bin\Debug\Maling.exe.config
+C:\Users\kag\OneDrive\Dokumenter\GitHub\Maling\Maling\Maling\bin\Debug\Maling.exe
+C:\Users\kag\OneDrive\Dokumenter\GitHub\Maling\Maling\Maling\bin\Debug\Maling.pdb
+C:\Users\kag\OneDrive\Dokumenter\GitHub\Maling\Maling\Maling\obj\Debug\Maling.csproj.AssemblyReference.cache
+C:\Users\kag\OneDrive\Dokumenter\GitHub\Maling\Maling\Maling\obj\Debug\Maling.Form1.resources
+C:\Users\kag\OneDrive\Dokumenter\GitHub\Maling\Maling\Maling\obj\Debug\Maling.Properties.Resources.resources
+C:\Users\kag\OneDrive\Dokumenter\GitHub\Maling\Maling\Maling\obj\Debug\Maling.csproj.GenerateResource.cache
+C:\Users\kag\OneDrive\Dokumenter\GitHub\Maling\Maling\Maling\obj\Debug\Maling.csproj.CoreCompileInputs.cache
+C:\Users\kag\OneDrive\Dokumenter\GitHub\Maling\Maling\Maling\obj\Debug\Maling.exe
+C:\Users\kag\OneDrive\Dokumenter\GitHub\Maling\Maling\Maling\obj\Debug\Maling.pdb
