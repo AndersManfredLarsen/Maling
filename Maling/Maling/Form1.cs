@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Maling
 {
-    public partial class Form1 : Form
+    public partial class GeneralWindow : Form
     {
-        public Form1()
+        public GeneralWindow()
         {
             InitializeComponent();
         }
