@@ -17,16 +17,18 @@ namespace Maling
             InitializeComponent();
         }
 
+        Bitmap drawingField;
+
         private void SaveButton_Click(object sender, EventArgs e)
         {
             //Når SaveButton bliver trykket på
-
+            Graphics g = Graphics.FromImage(drawingField);
         }
 
-        private void GeneralWindow_Load(object sender, EventArgs e)
+        public void GeneralWindow_Load(object sender, EventArgs e)
         {
             //Når det hele loader
-            Bitmap drawingField = new Bitmap(Drawing.Bounds.Width, Drawing.Bounds.Height);
+            drawingField = new Bitmap(Drawing.Bounds.Width, Drawing.Bounds.Height);
         }
     }
 }
