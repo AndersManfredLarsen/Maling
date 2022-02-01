@@ -8,3 +8,13 @@ C:\Users\kag\OneDrive\Dokumenter\GitHub\Maling\Maling\Maling\obj\Debug\Maling.cs
 C:\Users\kag\OneDrive\Dokumenter\GitHub\Maling\Maling\Maling\obj\Debug\Maling.exe
 C:\Users\kag\OneDrive\Dokumenter\GitHub\Maling\Maling\Maling\obj\Debug\Maling.pdb
 C:\Users\kag\OneDrive\Dokumenter\GitHub\Maling\Maling\Maling\obj\Debug\Maling.GeneralWindow.resources
+C:\Users\ander\Programmering\Projektværksted Horror Game\Maling\Maling\Maling\obj\Debug\Maling.csprojAssemblyReference.cache
+C:\Users\ander\Programmering\Projektværksted Horror Game\Maling\Maling\Maling\obj\Debug\Maling.GeneralWindow.resources
+C:\Users\ander\Programmering\Projektværksted Horror Game\Maling\Maling\Maling\obj\Debug\Maling.Properties.Resources.resources
+C:\Users\ander\Programmering\Projektværksted Horror Game\Maling\Maling\Maling\obj\Debug\Maling.csproj.GenerateResource.cache
+C:\Users\ander\Programmering\Projektværksted Horror Game\Maling\Maling\Maling\obj\Debug\Maling.csproj.CoreCompileInputs.cache
+C:\Users\ander\Programmering\Projektværksted Horror Game\Maling\Maling\Maling\obj\Debug\Maling.exe
+C:\Users\ander\Programmering\Projektværksted Horror Game\Maling\Maling\Maling\obj\Debug\Maling.pdb
+C:\Users\ander\Programmering\Projektværksted Horror Game\Maling\Maling\Maling\bin\Debug\Maling.exe.config
+C:\Users\ander\Programmering\Projektværksted Horror Game\Maling\Maling\Maling\bin\Debug\Maling.exe
+C:\Users\ander\Programmering\Projektværksted Horror Game\Maling\Maling\Maling\bin\Debug\Maling.pdb

@@ -12,9 +12,16 @@ namespace Maling
 {
     public partial class GeneralWindow : Form
     {
+        Graphics g;
+        int x = -1;
+        int y = -1;
+        bool moving = false;
+        Pen pen;
         public GeneralWindow()
         {
             InitializeComponent();
+            g = Drawing.CreateGraphics();
+            pen = new Pen(Color.Black, 5);
         }
 
         Bitmap drawingField;
@@ -29,6 +36,30 @@ namespace Maling
         {
             //Når det hele loader
             drawingField = new Bitmap(Drawing.Bounds.Width, Drawing.Bounds.Height);
+        }
+
+        private void panel1_MouseDown(object sender, MouseEventArgs e)
+        {
+            moving = true;
+            x = e.X;
+            y = e.Y;
+        }
+        private void panel1_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (moving && x != -1 && y != -1)
+            {
+                g.DrawLine(pen, new Point(x, y), e.Location);
+                x = e.X;
+                y = e.Y;
+            }
+        }
+
+        private void panel1_MouseUp(object sender, MouseEventArgs e)
+        {
+            moving = false;
+            x = -1;
+            y = -1;
+
         }
     }
 }

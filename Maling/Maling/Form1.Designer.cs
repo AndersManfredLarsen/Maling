@@ -104,6 +104,9 @@ namespace Maling
             this.Drawing.Name = "Drawing";
             this.Drawing.Size = new System.Drawing.Size(776, 377);
             this.Drawing.TabIndex = 6;
+            this.Drawing.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseDown);
+            this.Drawing.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseMove);
+            this.Drawing.MouseUp += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseUp);
             // 
             // SaveButton
             // 
