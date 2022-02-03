@@ -35,9 +35,11 @@ namespace Maling
             this.YellowColorBtn = new System.Windows.Forms.Button();
             this.BrushSize = new System.Windows.Forms.TrackBar();
             this.label1 = new System.Windows.Forms.Label();
-            this.Drawing = new System.Windows.Forms.Panel();
             this.SaveButton = new System.Windows.Forms.Button();
+            this.OpenButton = new System.Windows.Forms.Button();
+            this.Drawing = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.BrushSize)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Drawing)).BeginInit();
             this.SuspendLayout();
             // 
             // RedColorBtn
@@ -97,17 +99,6 @@ namespace Maling
             this.label1.TabIndex = 5;
             this.label1.Text = "Brush size";
             // 
-            // Drawing
-            // 
-            this.Drawing.BackColor = System.Drawing.Color.White;
-            this.Drawing.Location = new System.Drawing.Point(12, 61);
-            this.Drawing.Name = "Drawing";
-            this.Drawing.Size = new System.Drawing.Size(776, 377);
-            this.Drawing.TabIndex = 6;
-            this.Drawing.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseDown);
-            this.Drawing.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseMove);
-            this.Drawing.MouseUp += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseUp);
-            // 
             // SaveButton
             // 
             this.SaveButton.Location = new System.Drawing.Point(728, 12);
@@ -118,13 +109,37 @@ namespace Maling
             this.SaveButton.UseVisualStyleBackColor = true;
             this.SaveButton.Click += new System.EventHandler(this.SaveButton_Click);
             // 
+            // OpenButton
+            // 
+            this.OpenButton.Location = new System.Drawing.Point(662, 12);
+            this.OpenButton.Name = "OpenButton";
+            this.OpenButton.Size = new System.Drawing.Size(60, 30);
+            this.OpenButton.TabIndex = 8;
+            this.OpenButton.Text = "Open";
+            this.OpenButton.UseVisualStyleBackColor = true;
+            this.OpenButton.Click += new System.EventHandler(this.OpenButton_Click);
+            // 
+            // Drawing
+            // 
+            this.Drawing.BackColor = System.Drawing.Color.White;
+            this.Drawing.Image = global::Maling.Properties.Resources.WhiteOut;
+            this.Drawing.Location = new System.Drawing.Point(12, 61);
+            this.Drawing.Name = "Drawing";
+            this.Drawing.Size = new System.Drawing.Size(776, 377);
+            this.Drawing.TabIndex = 9;
+            this.Drawing.TabStop = false;
+            this.Drawing.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Drawing_MouseDown);
+            this.Drawing.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Drawing_MouseMove);
+            this.Drawing.MouseUp += new System.Windows.Forms.MouseEventHandler(this.Drawing_MouseUp);
+            // 
             // GeneralWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.SaveButton);
             this.Controls.Add(this.Drawing);
+            this.Controls.Add(this.OpenButton);
+            this.Controls.Add(this.SaveButton);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.BrushSize);
             this.Controls.Add(this.YellowColorBtn);
@@ -136,6 +151,7 @@ namespace Maling
             this.Text = "Backalley Paint";
             this.Load += new System.EventHandler(this.GeneralWindow_Load);
             ((System.ComponentModel.ISupportInitialize)(this.BrushSize)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Drawing)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -149,8 +165,9 @@ namespace Maling
         private System.Windows.Forms.Button YellowColorBtn;
         private System.Windows.Forms.TrackBar BrushSize;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Panel Drawing;
         private System.Windows.Forms.Button SaveButton;
+        private System.Windows.Forms.Button OpenButton;
+        private System.Windows.Forms.PictureBox Drawing;
     }
 }
 
