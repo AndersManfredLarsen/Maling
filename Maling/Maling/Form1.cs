@@ -96,6 +96,10 @@ namespace Maling
         {
             newColor = Color.White;
         }
+        private void BlackColorBtn_Click(object sender, EventArgs e)
+        {
+            newColor = Color.Black;
+        }
 
         private void BrushSize_Scroll(object sender, EventArgs e)
         {
