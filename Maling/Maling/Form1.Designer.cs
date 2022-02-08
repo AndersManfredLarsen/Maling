@@ -35,21 +35,22 @@ namespace Maling
             this.YellowColorBtn = new System.Windows.Forms.Button();
             this.BrushSize = new System.Windows.Forms.TrackBar();
             this.label1 = new System.Windows.Forms.Label();
-            this.Drawing = new System.Windows.Forms.Panel();
             this.SaveButton = new System.Windows.Forms.Button();
             this.EraserButton = new System.Windows.Forms.Button();
             this.BlackColorBtn = new System.Windows.Forms.Button();
+            this.Drawing = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.BrushSize)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Drawing)).BeginInit();
             this.SuspendLayout();
             // 
             // RedColorBtn
             // 
             this.RedColorBtn.BackColor = System.Drawing.Color.Red;
-            this.RedColorBtn.Location = new System.Drawing.Point(16, 15);
+            this.RedColorBtn.Location = new System.Drawing.Point(363, 15);
             this.RedColorBtn.Margin = new System.Windows.Forms.Padding(4);
             this.RedColorBtn.Name = "RedColorBtn";
             this.RedColorBtn.Size = new System.Drawing.Size(80, 37);
-            this.RedColorBtn.TabIndex = 0;
+            this.RedColorBtn.TabIndex = 5;
             this.RedColorBtn.Text = "Red";
             this.RedColorBtn.UseVisualStyleBackColor = false;
             this.RedColorBtn.Click += new System.EventHandler(this.RedColorBtn_Click);
@@ -97,7 +98,7 @@ namespace Maling
             this.BrushSize.Margin = new System.Windows.Forms.Padding(4);
             this.BrushSize.Name = "BrushSize";
             this.BrushSize.Size = new System.Drawing.Size(139, 56);
-            this.BrushSize.TabIndex = 4;
+            this.BrushSize.TabIndex = 7;
             this.BrushSize.Scroll += new System.EventHandler(this.BrushSize_Scroll);
             // 
             // label1
@@ -107,20 +108,8 @@ namespace Maling
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(74, 17);
-            this.label1.TabIndex = 5;
+            this.label1.TabIndex = 6;
             this.label1.Text = "Brush size";
-            // 
-            // Drawing
-            // 
-            this.Drawing.BackColor = System.Drawing.Color.White;
-            this.Drawing.Location = new System.Drawing.Point(16, 75);
-            this.Drawing.Margin = new System.Windows.Forms.Padding(4);
-            this.Drawing.Name = "Drawing";
-            this.Drawing.Size = new System.Drawing.Size(1035, 464);
-            this.Drawing.TabIndex = 6;
-            this.Drawing.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseDown);
-            this.Drawing.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseMove);
-            this.Drawing.MouseUp += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseUp);
             // 
             // SaveButton
             // 
@@ -128,7 +117,7 @@ namespace Maling
             this.SaveButton.Margin = new System.Windows.Forms.Padding(4);
             this.SaveButton.Name = "SaveButton";
             this.SaveButton.Size = new System.Drawing.Size(80, 37);
-            this.SaveButton.TabIndex = 7;
+            this.SaveButton.TabIndex = 9;
             this.SaveButton.Text = "Save";
             this.SaveButton.UseVisualStyleBackColor = true;
             this.SaveButton.Click += new System.EventHandler(this.SaveButton_Click);
@@ -147,23 +136,35 @@ namespace Maling
             // 
             this.BlackColorBtn.BackColor = System.Drawing.Color.Black;
             this.BlackColorBtn.ForeColor = System.Drawing.Color.White;
-            this.BlackColorBtn.Location = new System.Drawing.Point(363, 15);
+            this.BlackColorBtn.Location = new System.Drawing.Point(16, 15);
             this.BlackColorBtn.Name = "BlackColorBtn";
             this.BlackColorBtn.Size = new System.Drawing.Size(80, 37);
-            this.BlackColorBtn.TabIndex = 9;
+            this.BlackColorBtn.TabIndex = 0;
             this.BlackColorBtn.Text = "Black";
             this.BlackColorBtn.UseVisualStyleBackColor = false;
             this.BlackColorBtn.Click += new System.EventHandler(this.BlackColorBtn_Click);
+            // 
+            // Drawing
+            // 
+            this.Drawing.BackColor = System.Drawing.Color.White;
+            this.Drawing.Location = new System.Drawing.Point(16, 68);
+            this.Drawing.Name = "Drawing";
+            this.Drawing.Size = new System.Drawing.Size(1039, 474);
+            this.Drawing.TabIndex = 10;
+            this.Drawing.TabStop = false;
+            this.Drawing.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pictureBox1_MouseDown);
+            this.Drawing.MouseMove += new System.Windows.Forms.MouseEventHandler(this.pictureBox1_MouseMove);
+            this.Drawing.MouseUp += new System.Windows.Forms.MouseEventHandler(this.pictureBox1_MouseUp);
             // 
             // GeneralWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1067, 554);
+            this.Controls.Add(this.Drawing);
             this.Controls.Add(this.BlackColorBtn);
             this.Controls.Add(this.EraserButton);
             this.Controls.Add(this.SaveButton);
-            this.Controls.Add(this.Drawing);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.BrushSize);
             this.Controls.Add(this.YellowColorBtn);
@@ -176,6 +177,7 @@ namespace Maling
             this.Text = "Backalley Paint";
             this.Load += new System.EventHandler(this.GeneralWindow_Load);
             ((System.ComponentModel.ISupportInitialize)(this.BrushSize)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Drawing)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -189,10 +191,10 @@ namespace Maling
         private System.Windows.Forms.Button YellowColorBtn;
         private System.Windows.Forms.TrackBar BrushSize;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Panel Drawing;
         private System.Windows.Forms.Button SaveButton;
         private System.Windows.Forms.Button EraserButton;
         private System.Windows.Forms.Button BlackColorBtn;
+        private System.Windows.Forms.PictureBox Drawing;
     }
 }
 

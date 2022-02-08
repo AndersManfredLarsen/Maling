@@ -45,14 +45,21 @@ namespace Maling
             //Når det hele loader
             drawingField = new Bitmap(Drawing.Bounds.Width, Drawing.Bounds.Height);
         }
-
-        private void panel1_MouseDown(object sender, MouseEventArgs e)
+        private void pictureBox1_MouseDown(object sender, MouseEventArgs e)
         {
             moving = true;
             x = e.X;
             y = e.Y;
         }
-        private void panel1_MouseMove(object sender, MouseEventArgs e)
+
+        private void pictureBox1_MouseUp(object sender, MouseEventArgs e)
+        {
+            moving = false;
+            x = -1;
+            y = -1;
+        }
+
+        private void pictureBox1_MouseMove(object sender, MouseEventArgs e)
         {
             pen.Color = newColor;
             pen.Width = width;
@@ -62,14 +69,6 @@ namespace Maling
                 x = e.X;
                 y = e.Y;
             }
-        }
-
-        private void panel1_MouseUp(object sender, MouseEventArgs e)
-        {
-            moving = false;
-            x = -1;
-            y = -1;
-
         }
 
         private void RedColorBtn_Click(object sender, EventArgs e)
