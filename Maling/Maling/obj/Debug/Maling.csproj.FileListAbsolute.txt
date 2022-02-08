@@ -28,3 +28,13 @@ C:\Users\ander\Programmering\Maling\Maling\Maling\obj\Debug\Maling.csproj.Genera
 C:\Users\ander\Programmering\Maling\Maling\Maling\obj\Debug\Maling.csproj.CoreCompileInputs.cache
 C:\Users\ander\Programmering\Maling\Maling\Maling\obj\Debug\Maling.exe
 C:\Users\ander\Programmering\Maling\Maling\Maling\obj\Debug\Maling.pdb
+C:\Users\asger\OneDrive\Dokumenter\GitHub\Maling\Maling\Maling\bin\Debug\Maling.exe.config
+C:\Users\asger\OneDrive\Dokumenter\GitHub\Maling\Maling\Maling\bin\Debug\Maling.exe
+C:\Users\asger\OneDrive\Dokumenter\GitHub\Maling\Maling\Maling\bin\Debug\Maling.pdb
+C:\Users\asger\OneDrive\Dokumenter\GitHub\Maling\Maling\Maling\obj\Debug\Maling.csprojAssemblyReference.cache
+C:\Users\asger\OneDrive\Dokumenter\GitHub\Maling\Maling\Maling\obj\Debug\Maling.GeneralWindow.resources
+C:\Users\asger\OneDrive\Dokumenter\GitHub\Maling\Maling\Maling\obj\Debug\Maling.Properties.Resources.resources
+C:\Users\asger\OneDrive\Dokumenter\GitHub\Maling\Maling\Maling\obj\Debug\Maling.csproj.GenerateResource.cache
+C:\Users\asger\OneDrive\Dokumenter\GitHub\Maling\Maling\Maling\obj\Debug\Maling.csproj.CoreCompileInputs.cache
+C:\Users\asger\OneDrive\Dokumenter\GitHub\Maling\Maling\Maling\obj\Debug\Maling.exe
+C:\Users\asger\OneDrive\Dokumenter\GitHub\Maling\Maling\Maling\obj\Debug\Maling.pdb

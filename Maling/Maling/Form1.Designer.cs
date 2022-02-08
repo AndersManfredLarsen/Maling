@@ -39,6 +39,7 @@ namespace Maling
             this.EraserButton = new System.Windows.Forms.Button();
             this.BlackColorBtn = new System.Windows.Forms.Button();
             this.Drawing = new System.Windows.Forms.PictureBox();
+            this.SquareBt = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.BrushSize)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Drawing)).BeginInit();
             this.SuspendLayout();
@@ -156,11 +157,23 @@ namespace Maling
             this.Drawing.MouseMove += new System.Windows.Forms.MouseEventHandler(this.pictureBox1_MouseMove);
             this.Drawing.MouseUp += new System.Windows.Forms.MouseEventHandler(this.pictureBox1_MouseUp);
             // 
+            // SquareBt
+            // 
+            this.SquareBt.BackColor = System.Drawing.Color.Red;
+            this.SquareBt.Location = new System.Drawing.Point(738, 15);
+            this.SquareBt.Name = "SquareBt";
+            this.SquareBt.Size = new System.Drawing.Size(79, 37);
+            this.SquareBt.TabIndex = 11;
+            this.SquareBt.Text = "Square";
+            this.SquareBt.UseVisualStyleBackColor = false;
+            this.SquareBt.Click += new System.EventHandler(this.SquareBt_Click);
+            // 
             // GeneralWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1067, 554);
+            this.Controls.Add(this.SquareBt);
             this.Controls.Add(this.Drawing);
             this.Controls.Add(this.BlackColorBtn);
             this.Controls.Add(this.EraserButton);
@@ -195,6 +208,7 @@ namespace Maling
         private System.Windows.Forms.Button EraserButton;
         private System.Windows.Forms.Button BlackColorBtn;
         private System.Windows.Forms.PictureBox Drawing;
+        private System.Windows.Forms.Button SquareBt;
     }
 }
 
