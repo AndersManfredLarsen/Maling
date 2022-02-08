@@ -7,11 +7,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO;
+using System.Drawing.Imaging;
 
 namespace Maling
 {
     public partial class GeneralWindow : Form
     {
+        Bitmap drawingField;
         Graphics g;
         int x = -1;
         int y = -1;
@@ -24,7 +27,10 @@ namespace Maling
         {
             InitializeComponent();
             g = Drawing.CreateGraphics();
-
+            drawingField = new Bitmap(Drawing.Bounds.Width, Drawing.Bounds.Height);
+            g = Graphics.FromImage(drawingField);
+            g.FillRectangle(Brushes.White, 0, 0, Drawing.Bounds.Width, Drawing.Bounds.Height);
+            Drawing.Image = drawingField;
             pen = new Pen(Color.Black, 5);
 
             newColor = Color.Black;
@@ -32,18 +38,48 @@ namespace Maling
             BrushSize.Value = 5;
         }
 
-        Bitmap drawingField;
-
         private void SaveButton_Click(object sender, EventArgs e)
         {
             //Når SaveButton bliver trykket på
-            Graphics g = Graphics.FromImage(drawingField);
+            Stream fileStream;
+            SaveFileDialog saveFile = new SaveFileDialog();
+
+            saveFile.FileName = "Drawing.jpeg";
+            saveFile.Filter = "jpeg (*.jpeg)|*.jpeg";
+            saveFile.FilterIndex = 1;
+            saveFile.RestoreDirectory = true;
+            if (saveFile.FileName != "")
+            {
+                if (saveFile.ShowDialog() == DialogResult.OK)
+                {
+
+                    if ((fileStream = saveFile.OpenFile()) != null)
+                    {
+                        Drawing.Image.Save(fileStream, ImageFormat.Jpeg);
+                        fileStream.Close();
+                    }
+                }
+            }
         }
 
-        public void GeneralWindow_Load(object sender, EventArgs e)
+        private void openButton_Click(object sender, EventArgs e)
         {
-            //Når det hele loader
-            drawingField = new Bitmap(Drawing.Bounds.Width, Drawing.Bounds.Height);
+            //Når der trykkes på OpenButton
+            OpenFileDialog openFile = new OpenFileDialog();
+            openFile.InitialDirectory = @"c:\\";
+            openFile.Filter = "jpeg (*.jpeg)|*.jpeg";
+            openFile.FilterIndex = 1;
+            openFile.RestoreDirectory = true;
+
+            if (openFile.ShowDialog() == DialogResult.OK)
+            {
+                Drawing.Image = null;
+                Stream fileStream = openFile.OpenFile();
+
+                g.DrawImage(Image.FromStream(fileStream), 0, 0);
+                fileStream.Close();
+                Drawing.Image = drawingField;
+            }
         }
         private void pictureBox1_MouseDown(object sender, MouseEventArgs e)
         {
@@ -57,7 +93,6 @@ namespace Maling
         {
             if(drawingSquare == true)
             {
-                
                 Rectangle firkant = new Rectangle();
                 firkant.X = x;
                 firkant.Y = y;
@@ -85,16 +120,12 @@ namespace Maling
                     g.DrawLine(pen, new Point(x, y), e.Location);
                     x = e.X;
                     y = e.Y;
+                    Drawing.Image = drawingField;
 
                 }
                 else
                 {
-                 
-                   
-
                     
-
-
                 }
             }
         }
@@ -145,5 +176,7 @@ namespace Maling
                 SquareBt.BackColor = Color.Red;
             }
         }
+
+        
     }
 }
