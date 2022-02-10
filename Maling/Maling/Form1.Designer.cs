@@ -218,6 +218,7 @@ namespace Maling
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "GeneralWindow";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Backalley Paint";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.GeneralWindow_FormClosing);
             ((System.ComponentModel.ISupportInitialize)(this.BrushSize)).EndInit();

@@ -51,7 +51,7 @@ namespace Maling
             this.label1.Location = new System.Drawing.Point(120, 45);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(97, 17);
-            this.label1.TabIndex = 1;
+            this.label1.TabIndex = 2;
             this.label1.Text = "Are you sure?";
             // 
             // aysCancelButton
@@ -60,7 +60,7 @@ namespace Maling
             this.aysCancelButton.Location = new System.Drawing.Point(169, 85);
             this.aysCancelButton.Name = "aysCancelButton";
             this.aysCancelButton.Size = new System.Drawing.Size(60, 30);
-            this.aysCancelButton.TabIndex = 2;
+            this.aysCancelButton.TabIndex = 1;
             this.aysCancelButton.Text = "Cancel";
             this.aysCancelButton.UseVisualStyleBackColor = true;
             // 
@@ -68,7 +68,7 @@ namespace Maling
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(347, 153);
+            this.ClientSize = new System.Drawing.Size(333, 153);
             this.Controls.Add(this.aysCancelButton);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.aysClearButton);
