@@ -15,7 +15,9 @@ namespace Maling
     public partial class GeneralWindow : Form
     {
         Bitmap drawingField;
+        Bitmap savedDrawing;
         Graphics g;
+        
         int x = -1;
         int y = -1;
         bool moving = false;
@@ -28,6 +30,7 @@ namespace Maling
             InitializeComponent();
             g = Drawing.CreateGraphics();
             drawingField = new Bitmap(Drawing.Bounds.Width, Drawing.Bounds.Height);
+            savedDrawing = new Bitmap(Drawing.Bounds.Width, Drawing.Bounds.Height);
             g = Graphics.FromImage(drawingField);
             g.FillRectangle(Brushes.White, 0, 0, Drawing.Bounds.Width, Drawing.Bounds.Height);
             Drawing.Image = drawingField;
@@ -38,9 +41,57 @@ namespace Maling
             BrushSize.Value = 5;
         }
 
+        public List<float> Compare(Bitmap Source)
+        {
+            List<float> Result = new List<float>();
+
+            Bitmap downScaled = new Bitmap(Source, new Size(64, 64));
+
+            for (int j = 0; j < downScaled.Height; j++)
+            {
+                for (int i = 0; i < downScaled.Width; i++)
+                {
+                    Result.Add(downScaled.GetPixel(i, j).GetBrightness());
+                } 
+            }
+            return Result;
+        }
+
         private void SaveButton_Click(object sender, EventArgs e)
         {
             //Når SaveButton bliver trykket på
+            saveFile();
+        }
+
+        private void GeneralWindow_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            List<float> downscaledDrawingField = Compare(drawingField);
+            List<float> downscaledSavedDrawing = Compare(savedDrawing);
+
+            int equalElements = 0;
+
+            for (int i = 0; i < downscaledDrawingField.Count; i++)
+            {
+                if (downscaledDrawingField[i] == downscaledSavedDrawing[i])
+                {
+                    equalElements += 1;
+                }
+            }
+
+            if (equalElements != downscaledDrawingField.Count)
+            {
+                catchMissClose catchMissCloseForm = new catchMissClose();
+                DialogResult dialog = catchMissCloseForm.ShowDialog();
+
+                if (dialog == DialogResult.Yes)
+                {
+                    saveFile();
+                }
+            }
+        }
+
+        void saveFile()
+        {
             Stream fileStream;
             SaveFileDialog saveFile = new SaveFileDialog();
 
@@ -57,6 +108,7 @@ namespace Maling
                     {
                         Drawing.Image.Save(fileStream, ImageFormat.Jpeg);
                         fileStream.Close();
+                        savedDrawing = new Bitmap(Drawing.Image);
                     }
                 }
             }
@@ -79,13 +131,13 @@ namespace Maling
                 g.DrawImage(Image.FromStream(fileStream), 0, 0);
                 fileStream.Close();
                 Drawing.Image = drawingField;
+                savedDrawing = new Bitmap(Drawing.Image);
             }
         }
 
         private void clearButton_Click(object sender, EventArgs e)
         {
             PopupForm popup = new PopupForm();
-            popup.Location = new Point(ClientSize.Width / 2, ClientSize.Height / 2);
             DialogResult popupResult = popup.ShowDialog();
 
             if (popupResult == DialogResult.OK)
@@ -193,6 +245,5 @@ namespace Maling
                 SquareBt.BackColor = Color.Red;
             }
         }
-
     }
 }

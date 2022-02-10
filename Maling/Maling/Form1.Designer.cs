@@ -219,6 +219,7 @@ namespace Maling
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "GeneralWindow";
             this.Text = "Backalley Paint";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.GeneralWindow_FormClosing);
             ((System.ComponentModel.ISupportInitialize)(this.BrushSize)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Drawing)).EndInit();
             this.ResumeLayout(false);

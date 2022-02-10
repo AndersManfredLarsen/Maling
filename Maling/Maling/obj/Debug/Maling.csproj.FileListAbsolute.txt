@@ -49,3 +49,4 @@ C:\Users\danie\OneDrive\Documents\GitHub\Maling\Maling\Maling\obj\Debug\Maling.c
 C:\Users\danie\OneDrive\Documents\GitHub\Maling\Maling\Maling\obj\Debug\Maling.exe
 C:\Users\danie\OneDrive\Documents\GitHub\Maling\Maling\Maling\obj\Debug\Maling.pdb
 C:\Users\danie\OneDrive\Documents\GitHub\Maling\Maling\Maling\obj\Debug\Maling.PopupForm.resources
+C:\Users\danie\OneDrive\Documents\GitHub\Maling\Maling\Maling\obj\Debug\Maling.catchMissClose.resources
