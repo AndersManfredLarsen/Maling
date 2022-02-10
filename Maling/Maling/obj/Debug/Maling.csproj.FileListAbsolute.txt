@@ -38,3 +38,14 @@ C:\Users\asger\OneDrive\Dokumenter\GitHub\Maling\Maling\Maling\obj\Debug\Maling.
 C:\Users\asger\OneDrive\Dokumenter\GitHub\Maling\Maling\Maling\obj\Debug\Maling.csproj.CoreCompileInputs.cache
 C:\Users\asger\OneDrive\Dokumenter\GitHub\Maling\Maling\Maling\obj\Debug\Maling.exe
 C:\Users\asger\OneDrive\Dokumenter\GitHub\Maling\Maling\Maling\obj\Debug\Maling.pdb
+C:\Users\danie\OneDrive\Documents\GitHub\Maling\Maling\Maling\bin\Debug\Maling.exe.config
+C:\Users\danie\OneDrive\Documents\GitHub\Maling\Maling\Maling\bin\Debug\Maling.exe
+C:\Users\danie\OneDrive\Documents\GitHub\Maling\Maling\Maling\bin\Debug\Maling.pdb
+C:\Users\danie\OneDrive\Documents\GitHub\Maling\Maling\Maling\obj\Debug\Maling.csproj.AssemblyReference.cache
+C:\Users\danie\OneDrive\Documents\GitHub\Maling\Maling\Maling\obj\Debug\Maling.GeneralWindow.resources
+C:\Users\danie\OneDrive\Documents\GitHub\Maling\Maling\Maling\obj\Debug\Maling.Properties.Resources.resources
+C:\Users\danie\OneDrive\Documents\GitHub\Maling\Maling\Maling\obj\Debug\Maling.csproj.GenerateResource.cache
+C:\Users\danie\OneDrive\Documents\GitHub\Maling\Maling\Maling\obj\Debug\Maling.csproj.CoreCompileInputs.cache
+C:\Users\danie\OneDrive\Documents\GitHub\Maling\Maling\Maling\obj\Debug\Maling.exe
+C:\Users\danie\OneDrive\Documents\GitHub\Maling\Maling\Maling\obj\Debug\Maling.pdb
+C:\Users\danie\OneDrive\Documents\GitHub\Maling\Maling\Maling\obj\Debug\Maling.PopupForm.resources

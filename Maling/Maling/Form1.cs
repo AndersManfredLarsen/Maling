@@ -81,6 +81,23 @@ namespace Maling
                 Drawing.Image = drawingField;
             }
         }
+
+        private void clearButton_Click(object sender, EventArgs e)
+        {
+            PopupForm popup = new PopupForm();
+            popup.Location = new Point(ClientSize.Width / 2, ClientSize.Height / 2);
+            DialogResult popupResult = popup.ShowDialog();
+
+            if (popupResult == DialogResult.OK)
+            {
+                Console.WriteLine("Du trykkede 'Clear'");
+                g.Clear(Color.White);
+                Drawing.Image = drawingField;
+            }
+
+            popup.Dispose();
+        }
+
         private void pictureBox1_MouseDown(object sender, MouseEventArgs e)
         {
             moving = true;
@@ -177,6 +194,5 @@ namespace Maling
             }
         }
 
-        
     }
 }
