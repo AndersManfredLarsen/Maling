@@ -76,6 +76,7 @@ namespace Maling
                 {
                     equalElements += 1;
                 }
+                else break;
             }
 
             if (equalElements != downscaledDrawingField.Count)
@@ -160,22 +161,9 @@ namespace Maling
 
         private void pictureBox1_MouseUp(object sender, MouseEventArgs e)
         {
-            if(drawingSquare == true)
-            {
-                Rectangle firkant = new Rectangle();
-                firkant.X = x;
-                firkant.Y = y;
-                firkant.Width = x - e.X;
-                firkant.Height = y - e.Y;
-                g.DrawRectangle(pen,firkant);
-
-            }
-
-
             moving = false;
             x = -1;
             y = -1;
-
         }
 
         private void pictureBox1_MouseMove(object sender, MouseEventArgs e)
@@ -184,18 +172,10 @@ namespace Maling
             pen.Width = width;
             if (moving && x != -1 && y != -1)
             {
-                if(drawingSquare == false)
-                {
-                    g.DrawLine(pen, new Point(x, y), e.Location);
-                    x = e.X;
-                    y = e.Y;
-                    Drawing.Image = drawingField;
-
-                }
-                else
-                {
-                    
-                }
+                g.DrawLine(pen, new Point(x, y), e.Location);
+                x = e.X;
+                y = e.Y;
+                Drawing.Image = drawingField;
             }
         }
 
@@ -231,19 +211,6 @@ namespace Maling
         private void BrushSize_Scroll(object sender, EventArgs e)
         {
             width = BrushSize.Value;
-        }
-        bool drawingSquare = false;
-        private void SquareBt_Click(object sender, EventArgs e)
-        {
-            drawingSquare = !drawingSquare;
-            if(SquareBt.BackColor == Color.Red)
-            {
-                SquareBt.BackColor = Color.Green;
-            }
-            else
-            {
-                SquareBt.BackColor = Color.Red;
-            }
         }
     }
 }

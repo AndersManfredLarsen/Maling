@@ -40,7 +40,6 @@ namespace Maling
             this.EraserButton = new System.Windows.Forms.Button();
             this.BlackColorBtn = new System.Windows.Forms.Button();
             this.Drawing = new System.Windows.Forms.PictureBox();
-            this.SquareBt = new System.Windows.Forms.Button();
             this.openButton = new System.Windows.Forms.Button();
             this.clearButton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.BrushSize)).BeginInit();
@@ -163,18 +162,6 @@ namespace Maling
             this.Drawing.MouseMove += new System.Windows.Forms.MouseEventHandler(this.pictureBox1_MouseMove);
             this.Drawing.MouseUp += new System.Windows.Forms.MouseEventHandler(this.pictureBox1_MouseUp);
             // 
-            // SquareBt
-            // 
-            this.SquareBt.BackColor = System.Drawing.Color.Red;
-            this.SquareBt.Location = new System.Drawing.Point(739, 15);
-            this.SquareBt.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.SquareBt.Name = "SquareBt";
-            this.SquareBt.Size = new System.Drawing.Size(79, 37);
-            this.SquareBt.TabIndex = 11;
-            this.SquareBt.Text = "Square";
-            this.SquareBt.UseVisualStyleBackColor = false;
-            this.SquareBt.Click += new System.EventHandler(this.SquareBt_Click);
-            // 
             // openButton
             // 
             this.openButton.Location = new System.Drawing.Point(926, 15);
@@ -203,7 +190,6 @@ namespace Maling
             this.ClientSize = new System.Drawing.Size(1067, 554);
             this.Controls.Add(this.clearButton);
             this.Controls.Add(this.openButton);
-            this.Controls.Add(this.SquareBt);
             this.Controls.Add(this.Drawing);
             this.Controls.Add(this.BlackColorBtn);
             this.Controls.Add(this.EraserButton);
@@ -240,7 +226,6 @@ namespace Maling
         private System.Windows.Forms.Button EraserButton;
         private System.Windows.Forms.Button BlackColorBtn;
         private System.Windows.Forms.PictureBox Drawing;
-        private System.Windows.Forms.Button SquareBt;
         private System.Windows.Forms.Button openButton;
         private System.Windows.Forms.Button clearButton;
     }
