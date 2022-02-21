@@ -41,22 +41,6 @@ namespace Maling
             BrushSize.Value = 5;
         }
 
-        public List<float> Compare(Bitmap Source)
-        {
-            List<float> Result = new List<float>();
-
-            Bitmap downScaled = new Bitmap(Source, new Size(64, 64));
-
-            for (int j = 0; j < downScaled.Height; j++)
-            {
-                for (int i = 0; i < downScaled.Width; i++)
-                {
-                    Result.Add(downScaled.GetPixel(i, j).GetBrightness());
-                } 
-            }
-            return Result;
-        }
-
         private void SaveButton_Click(object sender, EventArgs e)
         {
             //Når SaveButton bliver trykket på
@@ -65,27 +49,37 @@ namespace Maling
 
         private void GeneralWindow_FormClosing(object sender, FormClosingEventArgs e)
         {
-            List<float> downscaledDrawingField = Compare(drawingField);
-            List<float> downscaledSavedDrawing = Compare(savedDrawing);
+            int equalElements = 0; //Hvor mange pixels er ens
 
-            int equalElements = 0;
+            Bitmap downScaledCurrent = new Bitmap(drawingField, new Size(16, 16)); //Downscaled version af tegnebrætter
+            Bitmap downScaledLastSaved = new Bitmap(savedDrawing, new Size(16, 16)); //Downscaled version af seneste gemte tegning
 
-            for (int i = 0; i < downscaledDrawingField.Count; i++)
+            //Loop igennem alle pixels
+            for (int x = 0; x < downScaledCurrent.Height; x++)
             {
-                if (downscaledDrawingField[i] == downscaledSavedDrawing[i])
+                for (int y = 0; y < downScaledCurrent.Width; y++)
                 {
-                    equalElements += 1;
+                    //Hvis pixel er ens
+                    if (downScaledCurrent.GetPixel(x, y).GetBrightness() == downScaledLastSaved.GetPixel(x, y).GetBrightness())
+                    {
+                        equalElements += 1;
+                    }
+                    //Hvis pixel ikke er ens
+                    else break;
                 }
-                else break;
             }
 
-            if (equalElements != downscaledDrawingField.Count)
+            //Hvis de to tegninger ikke er ens
+            if (equalElements != 16 * 16)
             {
+                //Laver et nyt vindue til at gemme eller ikke gemme
                 catchMissClose catchMissCloseForm = new catchMissClose();
                 DialogResult dialog = catchMissCloseForm.ShowDialog();
 
+                //Hvis brugeren trykker gem
                 if (dialog == DialogResult.Yes)
                 {
+                    //Køre gem methoden
                     saveFile();
                 }
             }

@@ -50,3 +50,5 @@ C:\Users\danie\OneDrive\Documents\GitHub\Maling\Maling\Maling\obj\Debug\Maling.e
 C:\Users\danie\OneDrive\Documents\GitHub\Maling\Maling\Maling\obj\Debug\Maling.pdb
 C:\Users\danie\OneDrive\Documents\GitHub\Maling\Maling\Maling\obj\Debug\Maling.PopupForm.resources
 C:\Users\danie\OneDrive\Documents\GitHub\Maling\Maling\Maling\obj\Debug\Maling.catchMissClose.resources
+C:\Users\kag\OneDrive\Dokumenter\GitHub\Maling\Maling\Maling\obj\Debug\Maling.catchMissClose.resources
+C:\Users\kag\OneDrive\Dokumenter\GitHub\Maling\Maling\Maling\obj\Debug\Maling.PopupForm.resources
