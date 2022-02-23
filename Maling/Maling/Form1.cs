@@ -90,56 +90,59 @@ namespace Maling
             Stream fileStream;
             SaveFileDialog saveFile = new SaveFileDialog();
 
+            //Indstillinger til "saveFile"
             saveFile.FileName = "Drawing.jpeg";
             saveFile.Filter = "jpeg (*.jpeg)|*.jpeg";
             saveFile.FilterIndex = 1;
             saveFile.RestoreDirectory = true;
-            if (saveFile.FileName != "")
-            {
-                if (saveFile.ShowDialog() == DialogResult.OK)
-                {
 
+            //Hvis der trykkes gem
+            if (saveFile.ShowDialog() == DialogResult.OK)
+                //Hvis filens navn ikke er tomt
+                if (saveFile.FileName != "")
+                    //Hvis fillokationen eksistere
                     if ((fileStream = saveFile.OpenFile()) != null)
                     {
-                        Drawing.Image.Save(fileStream, ImageFormat.Jpeg);
-                        fileStream.Close();
+                        Drawing.Image.Save(fileStream, ImageFormat.Jpeg); //Filen gemmes
+                        fileStream.Close(); //Filen lukkes
                         savedDrawing = new Bitmap(Drawing.Image);
                     }
-                }
-            }
         }
 
         private void openButton_Click(object sender, EventArgs e)
         {
             //Når der trykkes på OpenButton
             OpenFileDialog openFile = new OpenFileDialog();
+
+            //Indstillinger for "openFile"
             openFile.InitialDirectory = @"c:\\";
             openFile.Filter = "jpeg (*.jpeg)|*.jpeg";
             openFile.FilterIndex = 1;
             openFile.RestoreDirectory = true;
 
+            //Hvis der trykkes åben
             if (openFile.ShowDialog() == DialogResult.OK)
             {
-                Drawing.Image = null;
+                Drawing.Image = null; //Fjerner tegning til ingenting
                 Stream fileStream = openFile.OpenFile();
 
-                g.DrawImage(Image.FromStream(fileStream), 0, 0);
-                fileStream.Close();
-                Drawing.Image = drawingField;
-                savedDrawing = new Bitmap(Drawing.Image);
+                g.DrawImage(Image.FromStream(fileStream), 0, 0);//Tegner nye tegning på bitmap
+                fileStream.Close(); //Lukker fil
+                Drawing.Image = drawingField; //Indsætter tegningen på tegnebrættet
+                savedDrawing = new Bitmap(Drawing.Image); 
             }
         }
 
         private void clearButton_Click(object sender, EventArgs e)
         {
-            PopupForm popup = new PopupForm();
-            DialogResult popupResult = popup.ShowDialog();
+            PopupForm popup = new PopupForm(); //Åbner popup vindue og spørger om du ville slette alt
+            DialogResult popupResult = popup.ShowDialog(); //Indeholder hvad der trykkes på
 
+            //Hvis der trykkes "Clear"
             if (popupResult == DialogResult.OK)
             {
-                Console.WriteLine("Du trykkede 'Clear'");
-                g.Clear(Color.White);
-                Drawing.Image = drawingField;
+                g.Clear(Color.White); //Rydder bitmap
+                Drawing.Image = drawingField; //Rydder tegnebrættet
             }
 
             popup.Dispose();

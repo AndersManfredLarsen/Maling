@@ -38,9 +38,10 @@ namespace Maling
             // aysClearButton
             // 
             this.aysClearButton.DialogResult = System.Windows.Forms.DialogResult.OK;
-            this.aysClearButton.Location = new System.Drawing.Point(103, 85);
+            this.aysClearButton.Location = new System.Drawing.Point(70, 69);
+            this.aysClearButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.aysClearButton.Name = "aysClearButton";
-            this.aysClearButton.Size = new System.Drawing.Size(60, 30);
+            this.aysClearButton.Size = new System.Drawing.Size(52, 24);
             this.aysClearButton.TabIndex = 0;
             this.aysClearButton.Text = "Clear";
             this.aysClearButton.UseVisualStyleBackColor = true;
@@ -48,32 +49,35 @@ namespace Maling
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(120, 45);
+            this.label1.Location = new System.Drawing.Point(90, 37);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(97, 17);
+            this.label1.Size = new System.Drawing.Size(72, 13);
             this.label1.TabIndex = 2;
             this.label1.Text = "Are you sure?";
             // 
             // aysCancelButton
             // 
             this.aysCancelButton.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.aysCancelButton.Location = new System.Drawing.Point(169, 85);
+            this.aysCancelButton.Location = new System.Drawing.Point(127, 69);
+            this.aysCancelButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.aysCancelButton.Name = "aysCancelButton";
-            this.aysCancelButton.Size = new System.Drawing.Size(60, 30);
+            this.aysCancelButton.Size = new System.Drawing.Size(53, 24);
             this.aysCancelButton.TabIndex = 1;
             this.aysCancelButton.Text = "Cancel";
             this.aysCancelButton.UseVisualStyleBackColor = true;
             // 
             // PopupForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(333, 153);
+            this.ClientSize = new System.Drawing.Size(250, 124);
             this.Controls.Add(this.aysCancelButton);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.aysClearButton);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "PopupForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Are you sure?";
